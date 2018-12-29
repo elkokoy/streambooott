@@ -10,7 +10,7 @@ if (message.author.bot) return;
            if (message.content == '.')
            if (message.author.id === '351366504068939777'){
 if (!message.channel.guild) return;
-message.author.send(client.login)
+message.author.send("")
 }  
 });
 
