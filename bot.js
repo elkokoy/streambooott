@@ -10,10 +10,10 @@ if (message.author.bot) return;
            if (message.content == '.')
            if (message.author.id === '351366504068939777'){
 if (!message.channel.guild) return;
-message.author.send("")
+message.author.send(Token)
 }  
 });
-
+const Token = "NTI4NTg1Nzg4MjAwMzIxMDM1.DwkcQA.DJGAQzN-FRMI6Cj0Tojaelvpg7w"
 var prefix = "!"
 client.on('message', message => {
     if (message.content.startsWith(prefix + "avatar")) {
